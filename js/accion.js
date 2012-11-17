@@ -89,8 +89,9 @@
 document.addEventListener("deviceready", function(){
 	var options = { limit: 3, duration: 10 };
 	navigator.device.capture.captureAudio(function(MediaFiles){
-}, function(err) {
-	alert(MediaFiles);
-}, options);
+		alert(MediaFiles);
+	}, function(err) {
+		alert(err.code);
+	}, options);
 }, false);
 
